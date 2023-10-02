@@ -1,12 +1,14 @@
-import React, { FC, useState, SyntheticEvent } from "react";
+import React, { FC, useState, SyntheticEvent, useContext } from "react";
 import { Icon, faSearch } from "src/helpers/icons";
 import { AVATAR_DEFAULT, LOGO } from "src/helpers/const";
+import { UserContext } from "src/hooks/useUser";
 
 /**
  * Navigation component
  */
 
 const Navigation: FC = (): JSX.Element => {
+	const { user, signOut } = useContext(UserContext);
 	const [searchText, setSearchText] = useState<string>("");
 
 	// Updates state value of text search
@@ -45,8 +47,16 @@ const Navigation: FC = (): JSX.Element => {
 				</form>
 
 				{/* Logout */}
-				<div className="navigation__logout" title="Logout from your account">
-					<img className="avatar" src={AVATAR_DEFAULT} alt="User avatar" />
+				<div
+					className="navigation__logout"
+					title="Logout from your account"
+					onClick={signOut}
+				>
+					<img
+						className="avatar"
+						src={user?.photoURL || AVATAR_DEFAULT}
+						alt="User avatar"
+					/>
 					<p className="username">Logout</p>
 				</div>
 			</div>
