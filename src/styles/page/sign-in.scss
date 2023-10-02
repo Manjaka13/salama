@@ -1,0 +1,64 @@
+/**
+ * SignIn component styles
+ */
+
+.sign-in {
+	@include flex-col(center, center);
+
+	&__container {
+		width: 60%;
+		box-shadow: $box-shadow;
+		border-radius: 10px;
+		padding: 20px;
+		text-align: center;
+		background: $color-bg2;
+	}
+
+	.logo {
+		width: 120px;
+		border-radius: 10px;
+	}
+
+	.info {
+		margin-bottom: 20px;
+	}
+
+	.button {
+		@include flex-row(center, center);
+		width: 400px;
+		height: 50px;
+		border-radius: 5px;
+		margin: auto;
+	}
+
+	.icon {
+		margin-right: 10px;
+	}
+
+	.google {
+		background: #4185f4;
+		.icon {
+			background: white;
+			padding: 3px;
+			border-radius: 50%;
+		}
+	}
+
+	.github {
+		background: black;
+	}
+
+	&__divider {
+		@include flex-row(center, center);
+		padding: 10px 0;
+		.orText {
+			padding: 0 10px;
+		}
+		.lines {
+			flex: 1;
+			height: 2px;
+			border-radius: 2px;
+			background: rgb(53, 53, 53);
+		}
+	}
+}
