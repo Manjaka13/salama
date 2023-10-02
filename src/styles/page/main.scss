@@ -1,0 +1,9 @@
+/**
+ * Maint container styles
+ */
+
+.main {
+	@include flex-row(initial, initial);
+	width: 100%;
+	flex: 1;
+}
