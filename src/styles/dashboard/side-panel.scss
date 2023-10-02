@@ -16,7 +16,7 @@
 	&__close {
 		@include flex-row(center, center);
 		position: absolute;
-		top: 20px;
+		top: 15px;
 		right: 20px;
 		width: 24px;
 		height: 24px;
@@ -33,12 +33,19 @@
 		}
 	}
 
+	&__content {
+		display: none;
+	}
+
 	&--shown {
 		width: 320px;
 		pointer-events: auto;
 		.side-panel__close {
 			pointer-events: auto;
 			opacity: 1;
+		}
+		.side-panel__content {
+			display: block;
 		}
 	}
 }
