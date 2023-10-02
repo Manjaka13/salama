@@ -1,0 +1,15 @@
+{
+	"short_name": "Salama",
+	"name": "Salama",
+	"icons": [
+		{
+			"src": "images/logo-salama.png",
+			"type": "image/png",
+			"sizes": "169x169"
+		}
+	],
+	"start_url": ".",
+	"display": "standalone",
+	"theme_color": "#3274f1",
+	"background_color": "#282828"
+}
