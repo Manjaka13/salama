@@ -31,6 +31,7 @@
 		color: $color-text2;
 		border-radius: 5px;
 		cursor: pointer;
+		border: 3px transparent solid;
 		&:hover {
 			background: $color-bg3;
 			color: white;
@@ -52,6 +53,13 @@
 				height: 7px;
 				border-radius: 50%;
 				background: $color-success;
+			}
+		}
+		&--selected {
+			border: 3px $color-theme1 solid;
+			background: $color-bg3;
+			&:hover {
+				border: 3px $color-theme1 solid;
 			}
 		}
 	}
