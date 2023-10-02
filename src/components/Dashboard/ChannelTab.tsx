@@ -53,13 +53,8 @@ const ChannelTab: FC = (): JSX.Element => {
 				<Icon className="icon" icon={faCaretDown} /> Direct messages
 			</h2>
 			<ul className="channel-tab__list">{mappedDms}</ul>
-			<button className="channel-tab__create">
-				<Icon
-					className="icon"
-					icon={faPlusCircle}
-					onClick={() => switchDisplay()}
-				/>{" "}
-				New conversation
+			<button className="channel-tab__create" onClick={() => switchDisplay()}>
+				<Icon className="icon" icon={faPlusCircle} /> New conversation
 			</button>
 		</div>
 	);

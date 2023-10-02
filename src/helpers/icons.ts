@@ -5,10 +5,19 @@ import {
 	faCaretDown,
 	faMessage,
 	faPlusCircle,
+	faTimes,
 } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Export icons from here
  */
 
-export { Icon, faHeart, faSearch, faCaretDown, faMessage, faPlusCircle };
+export {
+	Icon,
+	faHeart,
+	faSearch,
+	faCaretDown,
+	faMessage,
+	faPlusCircle,
+	faTimes,
+};

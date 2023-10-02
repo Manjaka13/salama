@@ -11,9 +11,34 @@
 	background: $color-bg4;
 	box-shadow: $box-shadow;
 	padding: 10px 20px;
+	position: relative;
+
+	&__close {
+		@include flex-row(center, center);
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 24px;
+		height: 24px;
+		border-radius: 50%;
+		border: 1px white solid;
+		cursor: pointer;
+		pointer-events: none;
+		opacity: 0;
+		&:hover {
+			border: 1px $color-danger solid;
+			path {
+				color: $color-danger;
+			}
+		}
+	}
 
 	&--shown {
 		width: 320px;
 		pointer-events: auto;
+		.side-panel__close {
+			pointer-events: auto;
+			opacity: 1;
+		}
 	}
 }
