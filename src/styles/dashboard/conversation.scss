@@ -31,8 +31,10 @@
 	}
 
 	&__body {
+		@include flex-col(initial, flex-end);
 		flex: 1;
 		overflow: auto;
+		padding: 20px;
 	}
 
 	&__form {

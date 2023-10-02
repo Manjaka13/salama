@@ -1,0 +1,27 @@
+/**
+ * Conversation info styles
+ */
+
+.conversation-info {
+	&__head {
+		@include flex-row(initial, center);
+		.avatar {
+			width: 100px;
+			height: 100px;
+			border-radius: 10px;
+			margin-right: 20px;
+		}
+		.email {
+			color: $color-text3;
+		}
+	}
+
+	.text {
+		padding-top: 20px;
+	}
+
+	.tag {
+		color: $color-theme1;
+		cursor: pointer;
+	}
+}
