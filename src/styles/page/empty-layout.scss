@@ -1,0 +1,13 @@
+/**
+ * Setup some styles on adjacent components of the layout
+ */
+
+.empty-layout {
+	@include flex-col(center, center);
+	width: 100%;
+	flex: 1;
+
+	.footer {
+		background: none;
+	}
+}

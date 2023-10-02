@@ -6,6 +6,7 @@
 	@include flex-row(center, center);
 	width: 100%;
 	height: $standard-height;
+	background: $color-bg2;
 
 	@include screen-x(600px) {
 		@include flex-col(center, center);
