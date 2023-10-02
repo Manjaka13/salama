@@ -2,6 +2,7 @@ import React, { FC, useContext } from "react";
 import SignIn from "src/components/Page/SingIn";
 import { UserContext } from "src/hooks/useUser";
 import Loading from "src/components/Page/Loading";
+import Dashboard from "src/components/Page/Dashboard";
 
 /**
  * React entry point
@@ -12,7 +13,7 @@ const App: FC = (): JSX.Element => {
 
 	console.log(user);
 
-	return loading ? <Loading /> : user ? <p>Dashboard</p> : <SignIn />;
+	return loading ? <Loading /> : user ? <Dashboard /> : <SignIn />;
 };
 
 export default App;
