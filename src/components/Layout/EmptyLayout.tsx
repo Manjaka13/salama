@@ -1,4 +1,4 @@
-import React, { FC, Fragment } from "react";
+import React, { FC } from "react";
 import Main from "src/components/Page/Main";
 import Footer from "src/components/Page/Footer";
 
@@ -11,10 +11,10 @@ interface IEmptyLayout {
 }
 
 const EmptyLayout: FC<IEmptyLayout> = ({ children }): JSX.Element => (
-	<Fragment>
+	<div className="empty-layout">
 		<Main>{children}</Main>
 		<Footer />
-	</Fragment>
+	</div>
 );
 
 export default EmptyLayout;
