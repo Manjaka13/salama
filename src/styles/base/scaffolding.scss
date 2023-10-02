@@ -136,3 +136,9 @@ option[value=""][disabled] {
 	-ms-user-select: none; // Internet explorer/edge
 	user-select: none; // Everything else
 }
+
+svg {
+	path {
+		color: inherit;
+	}
+}

@@ -1,0 +1,34 @@
+/**
+ * Footer style
+ */
+
+.footer {
+	@include flex-row(center, center);
+	width: 100%;
+	height: $standard-height;
+
+	@include screen-x(600px) {
+		@include flex-col(center, center);
+		height: auto;
+	}
+
+	&__left {
+		margin-right: 5px;
+	}
+
+	&__right {
+		margin-left: 5px;
+	}
+
+	@include screen-x(600px) {
+		&__left,
+		&__right {
+			margin: 0;
+			text-align: center;
+		}
+	}
+
+	.icon {
+		color: $color-theme1;
+	}
+}
