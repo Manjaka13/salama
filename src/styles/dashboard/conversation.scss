@@ -8,9 +8,12 @@
 	flex: 1;
 
 	&__head {
-		@include flex-row(initial, center);
+		@include flex-row(space-between, center);
 		padding: 10px 20px;
 		border-bottom: 1px rgb(75, 75, 75) solid;
+		.target {
+			@include flex-row(initial, center);
+		}
 		.avatar {
 			width: 25px;
 			height: 25px;
@@ -27,6 +30,12 @@
 				border-radius: 50%;
 				background: $color-success;
 			}
+		}
+		.delete {
+			background: $color-danger;
+			border-radius: 5px;
+			cursor: pointer;
+			color: white;
 		}
 	}
 

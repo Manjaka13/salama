@@ -6,6 +6,7 @@ import {
 	faMessage,
 	faPlusCircle,
 	faTimes,
+	faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 
 /**
@@ -20,4 +21,5 @@ export {
 	faMessage,
 	faPlusCircle,
 	faTimes,
+	faTrash,
 };

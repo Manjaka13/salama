@@ -9,6 +9,7 @@ import { GENERAL } from "src/helpers/const";
  */
 
 interface IChannelContext {
+	allChannelList: IChannel[];
 	channelList: IChannel[];
 	dmList: IChannel[];
 	selectedChannel: string;
@@ -17,6 +18,7 @@ interface IChannelContext {
 }
 
 const defaultValues = {
+	allChannelList: [],
 	channelList: [],
 	dmList: [],
 	selectedChannel: GENERAL.id || "",
@@ -36,6 +38,9 @@ export const ChannelProvider: FC<IChannelProvider> = ({
 	email,
 	children,
 }): JSX.Element => {
+	const [allChannelList, setAllChannelList] = useState<IChannel[]>(
+		defaultValues.allChannelList
+	);
 	const [channelList, setChannelList] = useState<IChannel[]>(
 		defaultValues.channelList
 	);
@@ -58,6 +63,7 @@ export const ChannelProvider: FC<IChannelProvider> = ({
 					members: data.members,
 				});
 			});
+			setAllChannelList(fetchedChannels);
 			setChannelList(
 				fetchedChannels.filter(
 					(item: IChannel) =>
@@ -86,6 +92,7 @@ export const ChannelProvider: FC<IChannelProvider> = ({
 		channelList,
 		dmList,
 		selectedChannel,
+		allChannelList,
 		addChannel,
 		selectChannel,
 	};
