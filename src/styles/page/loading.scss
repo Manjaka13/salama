@@ -1,0 +1,22 @@
+/**
+ * Loading screen styles
+ */
+
+.loading {
+	@include flex-col(center, center);
+	width: 100%;
+	height: 100%;
+
+	&__container {
+		text-align: center;
+		background: $color-bg2;
+		height: auto;
+		padding: 20px;
+		border-radius: 10px;
+
+		.text {
+			margin-top: 20px;
+			color: $color-text2;
+		}
+	}
+}
