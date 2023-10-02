@@ -5,6 +5,10 @@
 .sign-in {
 	@include flex-col(center, center);
 
+	@include screen-x(800px) {
+		background: $color-bg2;
+	}
+
 	&__container {
 		width: 60%;
 		box-shadow: $box-shadow;
@@ -12,6 +16,20 @@
 		padding: 20px;
 		text-align: center;
 		background: $color-bg2;
+		@include screen-x(1024px) {
+			width: 80%;
+		}
+		@include screen-x(800px) {
+			width: 100%;
+			box-shadow: none;
+			border-radius: 0;
+		}
+	}
+
+	.title {
+		@include screen-x(800px) {
+			font-size: 35px;
+		}
 	}
 
 	.logo {
@@ -30,6 +48,9 @@
 		border-radius: 5px;
 		margin: auto;
 		cursor: pointer;
+		@include screen-x(800px) {
+			width: 100%;
+		}
 	}
 
 	.icon {

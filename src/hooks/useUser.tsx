@@ -46,6 +46,7 @@ export const UserProvider: FC<IUserProvider> = ({ children }): JSX.Element => {
 		let provider;
 		const auth = getAuth();
 		setLoading(true);
+		setError(null);
 		// Choose the provider
 		if (p === "google") provider = new GoogleAuthProvider();
 		else provider = new GithubAuthProvider();

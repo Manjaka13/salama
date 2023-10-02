@@ -21,6 +21,7 @@
 	}
 
 	@include screen-x(600px) {
+		padding: 10px 0;
 		&__left,
 		&__right {
 			margin: 0;
