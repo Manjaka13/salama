@@ -7,11 +7,11 @@ import Footer from "src/components/Page/Footer";
  * This is our default layout
  */
 
-interface IMainLayout {
+interface IDefaultLayout {
 	children?: JSX.Element;
 }
 
-const DefaultLayout: FC<IMainLayout> = ({ children }): JSX.Element => (
+const DefaultLayout: FC<IDefaultLayout> = ({ children }): JSX.Element => (
 	<Fragment>
 		<Navigation />
 		<Main>{children}</Main>
