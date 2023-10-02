@@ -6,10 +6,17 @@ import { FC } from "react";
 
 interface ISpinner {
 	className?: string;
+	alt?: boolean;
 }
 
-const Spinner: FC<ISpinner> = ({ className }): JSX.Element => (
-	<div className={`spinner${className ? " " + className : ""}`}>Loading...</div>
+const Spinner: FC<ISpinner> = ({ className, alt }): JSX.Element => (
+	<div
+		className={`spinner${alt ? " spinner--alt" : ""}${
+			className ? " " + className : ""
+		}`}
+	>
+		Loading...
+	</div>
 );
 
 export default Spinner;
