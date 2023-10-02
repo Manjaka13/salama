@@ -3,10 +3,11 @@ import {
 	faHeart,
 	faSearch,
 	faCaretDown,
+	faMessage,
 } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Export icons from here
  */
 
-export { Icon, faHeart, faSearch, faCaretDown };
+export { Icon, faHeart, faSearch, faCaretDown, faMessage };
