@@ -29,6 +29,7 @@
 		height: 50px;
 		border-radius: 5px;
 		margin: auto;
+		cursor: pointer;
 	}
 
 	.icon {
@@ -53,6 +54,9 @@
 		padding: 10px 0;
 		.orText {
 			padding: 0 10px;
+		}
+		.error {
+			color: $color-danger;
 		}
 		.lines {
 			flex: 1;

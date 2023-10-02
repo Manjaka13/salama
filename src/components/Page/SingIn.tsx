@@ -1,18 +1,19 @@
-import React, { FC, Fragment, useState } from "react";
+import React, { FC, Fragment, useContext } from "react";
 import Spinner from "src/components/Page/Spinner";
 import { LOGO } from "src/helpers/const";
+import { UserContext } from "src/hooks/useUser";
 
 /**
  * Sign-in component
  */
 
 const SignIn: FC = (): JSX.Element => {
-	const [loading, setLoading] = useState<boolean>(false);
+	const { loading, error, signIn } = useContext(UserContext);
 
 	// Check the provider to be fired
 	const fireProvider = (provider: string): void => {
-		setLoading(true);
 		console.log("Provider", provider);
+		signIn(provider);
 	};
 
 	return (
@@ -41,10 +42,12 @@ const SignIn: FC = (): JSX.Element => {
 						</button>
 						<div className="sign-in__divider">
 							<div className="lines"></div>
-							<p className="orText">OR</p>
+							<p className="orText">
+								{error ? <span className="error">{error}</span> : "OR"}
+							</p>
 							<div className="lines"></div>
 						</div>
-						<button className="button github" onClick={() => fireProvider("google")}>
+						<button className="button github" onClick={() => fireProvider("github")}>
 							<img
 								className="icon"
 								src="https://authjs.dev/img/providers/github-dark.svg"
