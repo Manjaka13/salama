@@ -7,6 +7,7 @@
 	width: 100%;
 	height: $standard-height;
 	background: $color-bg2;
+	box-shadow: $box-shadow;
 
 	@include screen-x(600px) {
 		@include flex-col(center, center);
