@@ -1,5 +1,4 @@
 import React, { FC, useContext } from "react";
-import EmptyLayout from "src/components/Layout/EmptyLayout";
 import SignIn from "src/components/Page/SingIn";
 import { UserContext } from "src/hooks/useUser";
 import Loading from "src/components/Page/Loading";
@@ -13,17 +12,7 @@ const App: FC = (): JSX.Element => {
 
 	console.log(user);
 
-	return loading ? (
-		<Loading />
-	) : user ? (
-		<EmptyLayout>
-			<p>Dashboard</p>
-		</EmptyLayout>
-	) : (
-		<EmptyLayout>
-			<SignIn />
-		</EmptyLayout>
-	);
+	return loading ? <Loading /> : user ? <p>Dashboard</p> : <SignIn />;
 };
 
 export default App;
