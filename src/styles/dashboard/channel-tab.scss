@@ -3,12 +3,13 @@
  */
 
 .channel-tab {
-	width: 350px;
+	width: 280px;
 	height: 100%;
 	overflow: auto;
 	background: $color-bg4;
 	box-shadow: $box-shadow;
 	padding: 10px 20px;
+	text-align: center;
 
 	&__title {
 		font-size: $fs-text2;
@@ -59,5 +60,14 @@
 		height: 1px;
 		background: rgb(104, 104, 104);
 		margin: 20px 0;
+	}
+
+	&__create {
+		padding: 10px 0;
+		width: 100%;
+		text-align: center;
+		background: $color-theme1;
+		border-radius: 5px;
+		margin-top: 20px;
 	}
 }

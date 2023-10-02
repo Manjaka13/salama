@@ -1,14 +1,19 @@
-import React, { FC } from "react";
+import React, { FC, useContext } from "react";
+import { PanelContext } from "src/hooks/usePanel";
 
 /**
  * The side panel
  */
 
-const SidePanel: FC = (): JSX.Element => {
+interface ISidePanel {
+	children?: JSX.Element;
+}
+
+const SidePanel: FC<ISidePanel> = ({ children }): JSX.Element => {
+	const { shown } = useContext(PanelContext);
+
 	return (
-		<div className="side-panel">
-			<p>Side panel</p>
-		</div>
+		<div className={`side-panel${shown && " side-panel--shown"}`}>{children}</div>
 	);
 };
 

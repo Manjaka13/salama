@@ -3,4 +3,17 @@
  */
 
 .side-panel {
+	@include transition;
+	width: 0;
+	height: 100%;
+	pointer-events: none;
+	overflow: auto;
+	background: $color-bg4;
+	box-shadow: $box-shadow;
+	padding: 10px 20px;
+
+	&--shown {
+		width: 320px;
+		pointer-events: auto;
+	}
 }

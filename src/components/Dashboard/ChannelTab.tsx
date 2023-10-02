@@ -1,7 +1,8 @@
 import React, { FC, useContext } from "react";
-import { Icon, faCaretDown } from "src/helpers/icons";
+import { Icon, faCaretDown, faPlusCircle } from "src/helpers/icons";
 import { UserContext } from "src/hooks/useUser";
 import { AVATAR_DEFAULT } from "src/helpers/const";
+import { PanelContext } from "src/hooks/usePanel";
 
 /**
  * Lists channels here
@@ -9,6 +10,7 @@ import { AVATAR_DEFAULT } from "src/helpers/const";
 
 const ChannelTab: FC = (): JSX.Element => {
 	const { user } = useContext(UserContext);
+	const { switchDisplay } = useContext(PanelContext);
 	const channelList: string[] = ["General", "Jokes", "Novity"];
 	const dmList: string[] = [
 		user?.displayName?.split(" ")[0] || "You",
@@ -51,6 +53,14 @@ const ChannelTab: FC = (): JSX.Element => {
 				<Icon className="icon" icon={faCaretDown} /> Direct messages
 			</h2>
 			<ul className="channel-tab__list">{mappedDms}</ul>
+			<button className="channel-tab__create">
+				<Icon
+					className="icon"
+					icon={faPlusCircle}
+					onClick={() => switchDisplay()}
+				/>{" "}
+				New conversation
+			</button>
 		</div>
 	);
 };
