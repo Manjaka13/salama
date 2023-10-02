@@ -3,4 +3,30 @@
  */
 
 .conversation {
+	@include flex-col(initial, initial);
+	background: $color-bg1;
+	flex: 1;
+
+	&__head {
+		@include flex-row(initial, center);
+		padding: 10px 20px;
+		border-bottom: 1px rgb(75, 75, 75) solid;
+		.avatar {
+			width: 25px;
+			height: 25px;
+			border-radius: 5px;
+			margin-right: 10px;
+		}
+		.status {
+			display: none;
+			margin-left: 10px;
+			&--active {
+				display: block;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: $color-success;
+			}
+		}
+	}
 }
