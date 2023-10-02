@@ -3,4 +3,61 @@
  */
 
 .channel-tab {
+	width: 350px;
+	height: 100%;
+	overflow: auto;
+	background: $color-bg4;
+	box-shadow: $box-shadow;
+	padding: 20px 40px;
+
+	&__title {
+		font-size: $fs-text2;
+		font-weight: normal;
+		.icon {
+			margin-right: 10px;
+		}
+	}
+
+	&__list {
+		flex-direction: column;
+		padding-top: 5px;
+	}
+
+	&__item {
+		@include flex-row(space-between, center);
+		padding: 5px 20px;
+		color: $color-text2;
+		border-radius: 5px;
+		cursor: pointer;
+		&:hover {
+			background: $color-bg3;
+			color: white;
+		}
+		.avatar {
+			width: 25px;
+			height: 25px;
+			border-radius: 50%;
+			margin-right: 10px;
+		}
+		.content {
+			@include flex-row(initial, center);
+		}
+		.status {
+			display: none;
+			&--active {
+				display: block;
+				width: 7px;
+				height: 7px;
+				border-radius: 50%;
+				background: $color-success;
+			}
+		}
+	}
+
+	&__divider {
+		width: 100%;
+		height: 1px;
+		background: rgb(104, 104, 104);
+		margin: 20px 0;
+	}
 }
