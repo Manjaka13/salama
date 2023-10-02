@@ -3,6 +3,7 @@ import { Icon, faCaretDown, faPlusCircle } from "src/helpers/icons";
 import { UserContext } from "src/hooks/useUser";
 import { AVATAR_DEFAULT } from "src/helpers/const";
 import { PanelContext } from "src/hooks/usePanel";
+import NewConverstation from "./NewConverstation";
 
 /**
  * Lists channels here
@@ -53,7 +54,10 @@ const ChannelTab: FC = (): JSX.Element => {
 				<Icon className="icon" icon={faCaretDown} /> Direct messages
 			</h2>
 			<ul className="channel-tab__list">{mappedDms}</ul>
-			<button className="channel-tab__create" onClick={() => switchDisplay()}>
+			<button
+				className="channel-tab__create"
+				onClick={() => switchDisplay(<NewConverstation />)}
+			>
 				<Icon className="icon" icon={faPlusCircle} /> New conversation
 			</button>
 		</div>

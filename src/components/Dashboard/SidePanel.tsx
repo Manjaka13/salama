@@ -6,23 +6,19 @@ import { PanelContext } from "src/hooks/usePanel";
  * The side panel
  */
 
-interface ISidePanel {
-	children?: JSX.Element;
-}
-
-const SidePanel: FC<ISidePanel> = ({ children }): JSX.Element => {
-	const { shown, switchDisplay } = useContext(PanelContext);
+const SidePanel: FC = (): JSX.Element => {
+	const { shown, content, switchDisplay } = useContext(PanelContext);
 
 	return (
 		<div className={`side-panel${shown && " side-panel--shown"}`}>
 			<div
 				className="side-panel__close"
 				title="Close panel"
-				onClick={() => switchDisplay()}
+				onClick={() => switchDisplay(null)}
 			>
 				<Icon className="icon" icon={faTimes} />
 			</div>
-			{children}
+			<div className="side-panel__content">{content}</div>
 		</div>
 	);
 };

@@ -6,11 +6,13 @@ import React, { FC, createContext, useState } from "react";
 
 interface IPanelContext {
 	shown: boolean;
-	switchDisplay: () => void;
+	content: JSX.Element | null;
+	switchDisplay: (c: JSX.Element | null) => void;
 }
 
 const defaultValues = {
 	shown: false,
+	content: null,
 	switchDisplay: () => {},
 };
 
@@ -25,12 +27,19 @@ export const PanelProvider: FC<IPanelProvider> = ({
 	children,
 }): JSX.Element => {
 	const [shown, setShown] = useState<boolean>(defaultValues.shown);
+	const [content, setContent] = useState<JSX.Element | null>(
+		defaultValues.content
+	);
 
 	// Shows/Hides side panel
-	const switchDisplay = (): void => setShown(!shown);
+	const switchDisplay = (c: JSX.Element | null): void => {
+		setShown(!shown);
+		setContent(c);
+	};
 
 	const value: IPanelContext = {
 		shown,
+		content,
 		switchDisplay,
 	};
 
