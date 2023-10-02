@@ -1,0 +1,65 @@
+/**
+ * Navigation styles
+ */
+
+.navigation {
+	width: 100%;
+	height: $standard-height;
+	background: $color-bg2;
+	box-shadow: $box-shadow;
+	position: relative;
+
+	&__container {
+		@include flex-row(space-between, center);
+		padding: 0 40px;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__title {
+		@include flex-row(initial, center);
+		.logo {
+			margin-right: 20px;
+			width: 30px;
+			border-radius: 5px;
+		}
+		.title {
+			font-size: $fs-h4;
+		}
+	}
+
+	&__search {
+		@include flex-row(initial, center);
+		width: 40%;
+		.input {
+			flex: 1;
+			border-radius: 5px 0 0 5px;
+			height: 30px;
+			padding: 0 20px;
+			color: $color-text3;
+		}
+		.button {
+			border-radius: 0 5px 5px 0;
+			height: 30px;
+			background: $color-theme1;
+			padding: 0 20px;
+		}
+		.icon {
+			margin-right: 10px;
+		}
+	}
+
+	&__logout {
+		@include flex-row(initial, center);
+		cursor: pointer;
+		padding: 0;
+		.avatar {
+			margin-right: 10px;
+			border-radius: 5px;
+			width: 30px;
+		}
+		&:hover {
+			font-weight: bold;
+		}
+	}
+}
